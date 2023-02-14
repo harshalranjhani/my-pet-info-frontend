@@ -112,7 +112,6 @@ function ResponsiveAppBar() {
                     <Link
                       to="/docs"
                       style={{ color: "inherit", textDecoration: "inherit" }}
-                      textAlign="center"
                     >
                       {setting}
                     </Link>
