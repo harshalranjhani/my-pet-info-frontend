@@ -8,13 +8,11 @@ const docInfoArray = [
     title: "Getting data for all the breeds of dogs",
     endpoint: "{baseUrl}/dog-breeds",
     exampleResponseImage: ExampleResponseAll,
-    mt: 4,
   },
   {
     title: "Getting data for a particular breed",
     endpoint: "{baseUrl}/dog-breeds/:id",
     exampleResponseImage: ExampleResponseOne,
-    mt: 28,
   },
 ];
 
@@ -30,7 +28,7 @@ const Docs = () => {
             mx: 4,
             fontStyle: "italic",
             textDecoration: "underline",
-            fontSize: {sm: "2rem", xs: "1rem"},
+            fontSize: { sm: "2rem", xs: "1rem" },
           }}
         >
           {`https://my-pet-info-backend.vercel.app`}

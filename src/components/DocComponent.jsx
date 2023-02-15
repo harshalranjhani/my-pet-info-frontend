@@ -4,7 +4,7 @@ import ExampleResponseAll from "../assets/ExampleResponseAll.png";
 
 const DocComponent = ({ docInfo }) => {
   return (
-    <div className={`mt-${docInfo.mt}`}>
+    <div className={`mt-28`}>
       <div>
         <Typography
           variant="h2"
