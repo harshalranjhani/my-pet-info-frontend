@@ -14,7 +14,7 @@ const docInfoArray = [
     title: "Getting data for a particular breed",
     endpoint: "{baseUrl}/dog-breeds/:id",
     exampleResponseImage: ExampleResponseOne,
-    mt: 40,
+    mt: 28,
   },
 ];
 
