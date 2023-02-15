@@ -3,7 +3,7 @@ import "./Loader.css";
 
 const Loader = () => {
   return (
-    <div>
+    <div className="flex justify-center items-center">
       <div className="paw-print-1">
         <div className="pad large"></div>
         <div className="pad small-1"></div>

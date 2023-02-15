@@ -6,7 +6,8 @@ import Loader from "./Loader.jsx";
 const Landing = () => {
   const [dogBreedData, setDogBreedData] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
-  const backendUrl = "http://localhost:3000";
+  const [isErrorLoading, setIsErrorLoading] = useState(false);
+  const backendUrl = "https://my-pet-info-backend.vercel.app";
   const getBreedData = async () => {
     setIsLoading(true);
     try {
@@ -16,6 +17,7 @@ const Landing = () => {
       setIsLoading(false);
     } catch (e) {
       console.log(e);
+      setIsErrorLoading(true);
       setIsLoading(false);
     }
   };
@@ -28,13 +30,22 @@ const Landing = () => {
       <div className="text-4xl font-black text-center text-black m-5">
         Dog breeds
       </div>
-      {isLoading && <Loader />}
-      {!isLoading && (
+      <div className="flex justify-center items-center m-10">
+        {isLoading && <Loader />}
+      </div>
+      {isErrorLoading && (
+        <h1 className="font-black text-white text-center flex items-center justify-center">
+          Could not load data.
+        </h1>
+      )}
+      {!isLoading && dogBreedData.length > 0 ? (
         <div className="flex flex-col md:flex-row flex-wrap">
           {dogBreedData.map((breed) => (
             <PetInfoCard petInfo={breed} />
           ))}
         </div>
+      ) : (
+        <></>
       )}
       {/* <div
         className={`text-4xl  ${

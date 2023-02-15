@@ -9,12 +9,12 @@ import { Link } from "react-router-dom";
 
 export default function MediaCard({ petInfo }) {
   return (
-    <div className="md:w-2/6">
+    <div className="md:w-2/6 rounded-full">
       <Card sx={{ maxWidth: 345, m: 5 }}>
         <CardMedia
-          sx={{ height: 140 }}
+          sx={{ height: 200 }}
           image={petInfo?.mainImageUrl}
-          title="green iguana"
+          title={petInfo?.name}
         />
         <CardContent className="bg-[#84a98c]">
           <Typography gutterBottom variant="h5" component="div">

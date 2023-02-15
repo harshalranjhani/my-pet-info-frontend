@@ -36,7 +36,7 @@ function ResponsiveAppBar() {
   };
 
   return (
-    <div className="">
+    <div className="bg-[#a4c3b2]">
       <AppBar position="static" color="transparent">
         <Container maxWidth="xl">
           <Toolbar disableGutters>

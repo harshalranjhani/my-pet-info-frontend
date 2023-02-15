@@ -7,7 +7,7 @@ const PetInfoPage = () => {
   const { id } = useParams();
   const [pet, setPet] = useState({});
   const [isLoading, setIsLoading] = useState(false);
-  const backendUrl = "http://localhost:3000";
+  const backendUrl = "https://my-pet-info-backend.vercel.app";
   const getMoreInfo = async () => {
     setIsLoading(true);
     try {
@@ -31,7 +31,7 @@ const PetInfoPage = () => {
         <div className="flex flex-col md:flex-row justify-center items-center">
           <div>
             <img
-              className="h-[33rem] w-[40rem] m-10"
+              className="h-80 w-80 md:h-[33rem] md:w-[50rem] m-10 md:m-10"
               src={pet?.mainImageUrl}
               alt={pet?.name}
             />

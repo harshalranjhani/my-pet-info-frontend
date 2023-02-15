@@ -134,10 +134,6 @@
     animation: walk 3s linear infinite 1.75s;
 }
 
-/* ::-webkit-scrollbar{
-    display: none;
-} */
-
 /* walking effect animation keyframes */
 
 @-webkit-keyframes walk {
